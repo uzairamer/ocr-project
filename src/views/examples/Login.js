@@ -62,7 +62,7 @@ class Login extends React.Component {
     return (
       <>
         <main ref="main">
-          <section className="section section-shaped section-lg" style={{'height': '100vh'}}>
+          <section className="section section-shaped section-lg" style={{ 'height': '100vh' }}>
             <div className="shape shape-style-1 bg-gradient-default">
               <span />
               <span />
@@ -163,7 +163,10 @@ class Login extends React.Component {
                           </label>
                         </div>
                         <div className="text-center">
-                          <Button
+                          {this.state.buttonDisabled ? <button class="btn btn-primary btn-sm mb-2" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            &nbsp; Please Wait...
+                          </button> : <Button
                             className="my-4"
                             color="primary"
                             type="click"
@@ -171,7 +174,8 @@ class Login extends React.Component {
                             onClick={(e) => this.onSubmit(e)}
                           >
                             Sign in
-                          </Button>
+                          </Button>}
+
                         </div>
                       </Form>
                     </CardBody>

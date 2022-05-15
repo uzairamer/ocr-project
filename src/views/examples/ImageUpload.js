@@ -227,7 +227,7 @@ class ImageUpload extends React.Component {
                             {
                               this.state.uploadButtonDisabled ? <button class="btn btn-primary btn-sm mb-2" type="button" disabled>
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                &nbsp; Loading...
+                                &nbsp; Please Wait...
                               </button> : <Button className="btn-1" color="primary" outline type="button" onClick={this.handleUpload}>
                                 Upload
                               </Button>
