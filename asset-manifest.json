@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ocr-project/static/css/main.09c260eb.css",
-    "main.js": "/ocr-project/static/js/main.46ac8a70.js",
+    "main.js": "/ocr-project/static/js/main.7659b7b7.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/ocr-project/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/ocr-project/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/ocr-project/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
@@ -16,10 +16,10 @@
     "static/media/FR.webp": "/ocr-project/static/media/FR.c1466f4f8e9a3b72ad3c.webp",
     "static/media/EN.webp": "/ocr-project/static/media/EN.4d2592b34def2452c51f.webp",
     "main.09c260eb.css.map": "/ocr-project/static/css/main.09c260eb.css.map",
-    "main.46ac8a70.js.map": "/ocr-project/static/js/main.46ac8a70.js.map"
+    "main.7659b7b7.js.map": "/ocr-project/static/js/main.7659b7b7.js.map"
   },
   "entrypoints": [
     "static/css/main.09c260eb.css",
-    "static/js/main.46ac8a70.js"
+    "static/js/main.7659b7b7.js"
   ]
 }
