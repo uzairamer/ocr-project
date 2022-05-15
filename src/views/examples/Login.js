@@ -47,14 +47,16 @@ class Login extends React.Component {
     fetch('https://ocr-project-349306.ew.r.appspot.com/auth/login', requestOptions)
       .then(response => {
         if (!response.ok) {
-          this.setState({ buttonDisabled: false, errorDisabled: false })
+          throw new Error('Credentials Issue')
         }
         return response.text()
       })
       .then(data => {
         console.log(data);
         this.props.history.push('/upload')
-      });
+      }).catch(error => {
+        this.setState({ buttonDisabled: false, errorDisabled: false })
+      })
   }
 
 
