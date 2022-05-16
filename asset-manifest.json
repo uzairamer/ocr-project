@@ -1,13 +1,17 @@
 {
   "files": {
     "main.css": "/ocr-project/static/css/main.09c260eb.css",
-    "main.js": "/ocr-project/static/js/main.7659b7b7.js",
+    "main.js": "/ocr-project/static/js/main.782287e6.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/ocr-project/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/ocr-project/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/ocr-project/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/landing.jpg": "/ocr-project/static/media/landing.530e5e3e621fe49e8e46.jpg",
     "static/media/nucleo-icons.svg": "/ocr-project/static/media/nucleo-icons.01ebecaf50461162d4bc.svg",
+    "static/media/profile.jpg": "/ocr-project/static/media/profile.991e6d2c8d229cc026b3.jpg",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/ocr-project/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/ocr-project/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/argon-react.png": "/ocr-project/static/media/argon-react.128d71d316a8e92aff4a.png",
+    "static/media/argon-react-white.png": "/ocr-project/static/media/argon-react-white.e4dd3b41697ada43fdcb.png",
     "static/media/nucleo-icons.eot": "/ocr-project/static/media/nucleo-icons.19abb5402a664606b14c.eot",
     "static/media/nucleo-icons.ttf": "/ocr-project/static/media/nucleo-icons.d6a66724e7a7bf1bba65.ttf",
     "static/media/nucleo-icons.woff": "/ocr-project/static/media/nucleo-icons.c82c9b7c40130b7116d3.woff",
@@ -16,10 +20,10 @@
     "static/media/FR.webp": "/ocr-project/static/media/FR.c1466f4f8e9a3b72ad3c.webp",
     "static/media/EN.webp": "/ocr-project/static/media/EN.4d2592b34def2452c51f.webp",
     "main.09c260eb.css.map": "/ocr-project/static/css/main.09c260eb.css.map",
-    "main.7659b7b7.js.map": "/ocr-project/static/js/main.7659b7b7.js.map"
+    "main.782287e6.js.map": "/ocr-project/static/js/main.782287e6.js.map"
   },
   "entrypoints": [
     "static/css/main.09c260eb.css",
-    "static/js/main.7659b7b7.js"
+    "static/js/main.782287e6.js"
   ]
 }

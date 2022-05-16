@@ -28,6 +28,12 @@ object-assign
   http://jedwatson.github.io/classnames
 */
 
+/*!
+ * headroom.js v0.11.0 - Give your page some headroom. Hide your header until you need it
+ * Copyright (c) 2020 Nick Williams - http://wicky.nillia.ms/headroom.js
+ * License: MIT
+ */
+
 /** @license React v0.18.0
  * scheduler.production.min.js
  *
