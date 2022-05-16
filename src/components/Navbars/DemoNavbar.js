@@ -38,6 +38,8 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import "assets/vendor/font-awesome/css/font-awesome.min.css";
+
 
 class DemoNavbar extends React.Component {
   componentDidMount() {
@@ -55,6 +57,10 @@ class DemoNavbar extends React.Component {
       collapseClasses: "collapsing-out"
     });
   };
+
+  handleSignIn = () => {
+    this.props.history.push('/login-page')
+  }
 
   onExited = () => {
     this.setState({
@@ -107,7 +113,7 @@ class DemoNavbar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                  <UncontrolledDropdown nav>
+                  {/* <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Components</span>
@@ -170,8 +176,8 @@ class DemoNavbar extends React.Component {
                         </Media>
                       </div>
                     </DropdownMenu>
-                  </UncontrolledDropdown>
-                  <UncontrolledDropdown nav>
+                  </UncontrolledDropdown> */}
+                  {/* <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-collection d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Examples</span>
@@ -190,13 +196,13 @@ class DemoNavbar extends React.Component {
                         Register
                       </DropdownItem>
                     </DropdownMenu>
-                  </UncontrolledDropdown>
+                  </UncontrolledDropdown> */}
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://www.facebook.com/creativetim"
+                      href="#"
                       id="tooltip333589074"
                       target="_blank"
                     >
@@ -212,7 +218,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://www.instagram.com/creativetimofficial"
+                      href="#"
                       id="tooltip356693867"
                       target="_blank"
                     >
@@ -228,7 +234,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://twitter.com/creativetim"
+                      href="#"
                       id="tooltip184698705"
                       target="_blank"
                     >
@@ -244,7 +250,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="https://github.com/creativetimofficial/argon-design-system-react"
+                      href="#"
                       id="tooltip112445449"
                       target="_blank"
                     >
@@ -261,14 +267,13 @@ class DemoNavbar extends React.Component {
                     <Button
                       className="btn-neutral btn-icon"
                       color="default"
-                      href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-navbar"
-                      target="_blank"
+                      onClick={this.handleSignIn}
                     >
                       <span className="btn-inner--icon">
-                        <i className="fa fa-cloud-download mr-2" />
+                        <i className="fa fa-sign-in mr-2" />
                       </span>
                       <span className="nav-link-inner--text ml-1">
-                        Download
+                        Sign In
                       </span>
                     </Button>
                   </NavItem>

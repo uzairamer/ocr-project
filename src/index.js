@@ -25,13 +25,15 @@ import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
 import Login from "views/examples/Login.js";
 import ImageUpload from "views/examples/ImageUpload";
+import Landing from "views/examples/Landing";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
+      <Route path="/" exact render={props => <Landing {...props} />} />
       <Route path="/upload" exact render={props => <ImageUpload {...props} />} />
       <Route path="/login-page" exact render={props => <Login {...props} />} />
-      <Redirect to="/login-page" />
+      <Redirect to="/" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
