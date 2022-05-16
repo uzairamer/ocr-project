@@ -51,10 +51,8 @@ class ImageUpload extends React.Component {
   }
 
   handleOCRResponse = (text) => {
-    const parsedDOM = new DOMParser().parseFromString(text, 'text/html');
-    let [extracted, translated] = parsedDOM.body.textContent.split('Extracted Text: ')[1].split('Translated Text:');
-    translated = translated.split('Translated Language:')[0]
-    this.setState({extracted, translated})
+    this.props.history.push('/result', {extracted: text['data']['input'], translated: text['data']['text'], lang: text['data']['lang'][0]})
+    // this.setState({extracted, translated})
   }
   handleUpload = (e) => {
     e.preventDefault();
@@ -81,8 +79,8 @@ class ImageUpload extends React.Component {
         if (!response.ok) {
 
         }
-        this.toggleModal("defaultModal")
-        return response.text()
+        // this.toggleModal("defaultModal")
+        return response.json()
       })
       .then(data => {
         this.handleOCRResponse(data)
@@ -148,7 +146,7 @@ class ImageUpload extends React.Component {
             </div>
           </Modal>
           <section className="section section-shaped section-lg"  style={{'height': '100vh'}}>
-            <div className="shape shape-style-1 bg-gradient-default">
+            <div className="shape shape-style-1 shape-default">
               <span />
               <span />
               <span />
@@ -227,7 +225,7 @@ class ImageUpload extends React.Component {
                             {
                               this.state.uploadButtonDisabled ? <button class="btn btn-primary btn-sm mb-2" type="button" disabled>
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                &nbsp; Please Wait...
+                                &nbsp; Loading...
                               </button> : <Button className="btn-1" color="primary" outline type="button" onClick={this.handleUpload}>
                                 Upload
                               </Button>

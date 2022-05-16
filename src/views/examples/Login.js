@@ -46,14 +46,12 @@ class Login extends React.Component {
     this.setState({ buttonDisabled: true, errorDisabled: true })
     fetch('https://ocr-project-349306.ew.r.appspot.com/auth/login', requestOptions)
       .then(response => {
-        if (!response.ok) {
-          throw new Error('Credentials Issue')
-        }
         return response.text()
       })
       .then(data => {
-        console.log(data);
-        this.props.history.push('/upload')
+        if(data==='false')
+          throw new Error('Credentials Issue')
+        this.props.history.replace('/upload', {this: 1})
       }).catch(error => {
         this.setState({ buttonDisabled: false, errorDisabled: false })
       })
@@ -65,7 +63,7 @@ class Login extends React.Component {
       <>
         <main ref="main">
           <section className="section section-shaped section-lg" style={{ 'height': '100vh' }}>
-            <div className="shape shape-style-1 bg-gradient-default">
+            <div className="shape shape-style-1 shape-default">
               <span />
               <span />
               <span />
