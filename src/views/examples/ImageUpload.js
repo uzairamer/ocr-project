@@ -26,10 +26,11 @@ class ImageUpload extends React.Component {
     showImageContainer: false,
     uploadButtonDisabled: false,
     imageFile: null,
-    language: 'EN',
+    language: 'Choose Lanugage',
     defaultModal: false,
     extracted: '',
-    translated: ''
+    translated: '',
+    languages: {}
 
   }
   constructor(props) {
@@ -40,6 +41,27 @@ class ImageUpload extends React.Component {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
+    fetch('https://ocr-project-349306.ew.r.appspot.com/process/languages')
+      .then(response => {
+        this.setState({ uploadButtonDisabled: false })
+        if (!response.ok) {
+
+        }
+        // this.toggleModal("defaultModal")
+        return response.json()
+      })
+      .then(data => {
+        this.handleLanguagesAPICall(data)
+        // this.props.history.push('/upload')
+      });
+
+  }
+  handleLanguagesAPICall = (languages) => {
+    const languagesMap = {}
+    for (const language of languages['languages']){
+      languagesMap[language['name']] = language['code']
+    }
+    this.setState({languages: languagesMap})
   }
   toggleModal = state => {
     this.setState({
@@ -59,7 +81,7 @@ class ImageUpload extends React.Component {
 
     const formData = new FormData()
     formData.append("file", this.state.imageFile);
-    formData.append('language', this.state.language.toLowerCase());
+    formData.append('language', this.state.languages[this.state.language]);
 
     const requestOptions = {
       method: 'POST',
@@ -182,20 +204,15 @@ class ImageUpload extends React.Component {
                         <div className="text-center">
                           <UncontrolledDropdown>
                             <DropdownToggle caret color="default">
-                              <img alt="..." src={require(`assets/img/icons/common/${this.state.language}.webp`)} />
                               {this.state.language}
                             </DropdownToggle>
-                            <DropdownMenu>
-                              <li>
-                                <DropdownItem href="#pablo" onClick={() => this.handleLanguage('EN')}>
-                                  <img
-                                    alt="..."
-                                    src={require("assets/img/icons/common/EN.webp")}
-                                  />
-                                  &nbsp; EN
+                            <DropdownMenu style={{'height': '40vh', 'overflow-y': 'scroll'}}>
+                              {Object.keys(this.state.languages).map(language => <li>
+                                <DropdownItem href={`#${language}`} onClick={() => this.handleLanguage(language)}>
+                                  &nbsp; {language}
                                 </DropdownItem>
-                              </li>
-                              <li>
+                              </li>)}
+                              {/* <li>
                                 <DropdownItem href="#pablo" onClick={() => this.handleLanguage('FR')}>
                                   <img
                                     alt="..."
@@ -203,7 +220,7 @@ class ImageUpload extends React.Component {
                                   />
                                   &nbsp; FR
                                 </DropdownItem>
-                              </li>
+                              </li> */}
                             </DropdownMenu>
                           </UncontrolledDropdown>
                         </div>

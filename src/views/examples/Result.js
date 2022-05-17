@@ -47,29 +47,30 @@ Translated: ${this.props.history.location.state.translated}
                         toggle={() => this.toggleModal("defaultModal")}
                     >
                         <div className="modal-header">
-                            <h6 className="modal-title" id="modal-title-default">
-                                OCR Output
-                            </h6>
+                            <h4 className="modal-title" id="modal-title-default">
+                                OCR Result
+                            </h4>
                             <button
                                 aria-label="Close"
                                 className="close"
                                 data-dismiss="modal"
                                 type="button"
-                                onClick={() => this.toggleModal("defaultModal")}
+                                onClick={() => this.props.history.replace('/upload')}
                             >
-                                <span aria-hidden={true}>×</span>
+                                <span aria-hidden={true}>x</span>
                             </button>
                         </div>
                         <div className="modal-body">
-                            <h5>Extracted Text:</h5>
-                            <p>
+                            <h3><strong>Extracted Text:</strong></h3>
+                            <h5>
                                 {this.props.history.location.state.extracted}
-                            </p>
-                            <h5>Translated Text:</h5>
-                            <p>
+                            </h5>
+                            <h3><strong>Translated Text:</strong></h3>
+                            <h5>
                                 {this.props.history.location.state.translated}
-                            </p>
-                            <p>Translation: {this.props.history.location.state.lang}</p>
+                            </h5>
+                            <br />
+                            <h5><strong>Translation:</strong> {this.props.history.location.state.lang}</h5> <></>
                         </div>
                         <div className="modal-footer">
                             <Button color="primary" type="button" onClick={this.handleCopy}>
