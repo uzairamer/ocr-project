@@ -18,6 +18,7 @@ import {
 import "../../assets/vendor/nucleo/css/nucleo-svg.css"
 import "../../assets/css/argon-design-system-react.css";
 import "../../assets/css/my-css.css";
+import ImageToText from "components/ImageToText";
 
 class ImageUpload extends React.Component {
   state = {
@@ -125,6 +126,7 @@ class ImageUpload extends React.Component {
       <>
         {/* <DemoNavbar /> */}
         <main ref="main">
+          <ImageToText />
           <Modal
             className="modal-dialog-centered"
             isOpen={this.state.defaultModal}

@@ -9,6 +9,7 @@ import {
 import "../../assets/vendor/nucleo/css/nucleo-svg.css"
 import "../../assets/css/argon-design-system-react.css";
 import "../../assets/css/my-css.css";
+import ImageToText from "components/ImageToText";
 
 class Result extends React.Component {
     
@@ -41,6 +42,7 @@ Translated: ${this.props.history.location.state.translated}
             <>
                 {/* <DemoNavbar /> */}
                 <main ref="main">
+                    <ImageToText />
                     <Modal
                         className="modal-dialog-centered"
                         isOpen={this.state.defaultModal}

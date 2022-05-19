@@ -47,7 +47,7 @@ class Hero extends React.Component {
                     <img
                       alt="..."
                       className="img-fluid"
-                      src={require("assets/img/brand/argon-react-white.png")}
+                      src={require("assets/img/brand/imagetotext.png")}
                       style={{ width: "200px" }}
                     />
                     <p className="lead text-white">

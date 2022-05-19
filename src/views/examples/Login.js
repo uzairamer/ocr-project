@@ -1,3 +1,4 @@
+import ImageToText from "components/ImageToText";
 import React from "react";
 
 // reactstrap components
@@ -62,6 +63,7 @@ class Login extends React.Component {
     return (
       <>
         <main ref="main">
+          <ImageToText />
           <section className="section section-shaped section-lg" style={{ 'height': '100vh' }}>
             <div className="shape shape-style-1 shape-default">
               <span />

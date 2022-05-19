@@ -81,7 +81,8 @@ class DemoNavbar extends React.Component {
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                 <img
                   alt="..."
-                  src={require("assets/img/brand/logo2.png")}
+                  style={{'width': '230px', 'height': '70px'}}
+                  src={require("assets/img/brand/imagetotext.png")}
                 />
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
