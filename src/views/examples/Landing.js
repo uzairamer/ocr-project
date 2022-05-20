@@ -61,10 +61,7 @@ class Landing extends React.Component {
                 <div className="col px-0">
                   <Row>
                     <Col lg="6">
-                      <h1 className="display-3 text-white">
-                        ImageToText{" "}
-                        {/* <span>completed with examples</span> */}
-                      </h1>
+                      <h1>&nbsp;</h1>
                       <p className="lead text-white">
                         ImageToText app is an intuitive and useful OCR application for converting images to text.
                         It was developed by Philip S and consists of three components: the React-based web app hosted on Google Cloud Platform, the REST API hosted on Google Cloud Platform, and the trained OCR model, a Google Machine Learning model used for translation.
